@@ -1,3 +1,4 @@
+import sys
 
 def count_letters(words):
     letter_count_dict = {}
@@ -17,7 +18,7 @@ def count_words(words):
     
 
 def main():
-    with open("./books/frankenstein.txt") as f:
+    with open(sys.argv[1]) as f:
         file_contents = f.read()
         word_count = count_words(file_contents)
         letter_count = count_letters(file_contents)
